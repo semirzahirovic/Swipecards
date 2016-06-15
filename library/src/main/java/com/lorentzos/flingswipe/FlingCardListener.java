@@ -282,6 +282,10 @@ public class FlingCardListener implements View.OnTouchListener {
             onSelected(false, objectY, 200);
     }
 
+    public void selectCenter() {
+        mFlingListener.onButtonClicked(dataObject);
+    }
+
 
     private float getExitPoint(int exitXPoint) {
         float[] x = new float[2];
@@ -343,6 +347,8 @@ public class FlingCardListener implements View.OnTouchListener {
         void onClick(Object dataObject);
 
         void onScroll(float scrollProgressPercent);
+
+        void onButtonClicked(Object dataObject);
     }
 
 }
